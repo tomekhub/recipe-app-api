@@ -21,6 +21,7 @@ schema_view = get_swagger_view(title='Recipes API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('docs/', schema_view),
     path('api/user/', include('user.urls')),
-    path('docs/', schema_view)
+    path('api/recipe/', include('recipe.urls')),
 ]
